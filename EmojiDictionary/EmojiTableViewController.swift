@@ -47,10 +47,18 @@ class EmojiTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return section == 0 ? emojis.count : 0;   //p. 613
+        guard section == 0 else {
+            fatalError("This UITableView has no section number \(section).");
+        }
+        
+        return emojis.count;   //p. 613
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard indexPath.section == 0 else {
+            fatalError("This UITableView has no section number \(indexPath.section).");
+        }
+ 
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath); //pp. 613-614
 
         // Configure the cell...
