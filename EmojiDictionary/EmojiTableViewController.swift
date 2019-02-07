@@ -40,7 +40,7 @@ class EmojiTableViewController: UITableViewController {
         tableView.reloadData();   //pp. 619
     }
 
-    // MARK: - Table view data source
+    // MARK: - Table view data source, p. 611.
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1;   //p. 612
