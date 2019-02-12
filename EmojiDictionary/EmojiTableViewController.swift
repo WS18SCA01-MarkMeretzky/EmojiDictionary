@@ -115,7 +115,7 @@ class EmojiTableViewController: UITableViewController {
         let tableViewEditingMode: Bool = tableView.isEditing;
         tableView.setEditing(!tableViewEditingMode, animated: true);
         
-        //Toggle the Edit/Done button.
+        //Toggle the button between the words Edit and Done.
         let systemItem: UIBarButtonItem.SystemItem = tableView.isEditing ? UIBarButtonItem.SystemItem.done : UIBarButtonItem.SystemItem.edit;
         let button: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: systemItem, target: self, action: #selector(editButtonTapped(_:)));
         navigationItem.leftBarButtonItem = button;
